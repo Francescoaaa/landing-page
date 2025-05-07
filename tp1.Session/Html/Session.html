@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="../css/Session.css">
+    <link rel="stylesheet" href="../Css/Session.css">
+    <title>Fusion Store</title>
 </head>
 <body>
-    <form class="login-form" action="/login" method="POST">
-        <h2>Iniciar Sesión</h2>
-        <label for="username">Usuario</label>
-        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
-        
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
-        
-        <button type="submit">Iniciar Sesión</button>
-    </form>
+    <main class="contendor-login">
+        <h1 class="Login">Fusion</h1>
+        <form class="loginFormContainer">
+            <div id="formlogin">
+                <input type="text" id="usuario"
+                name="usuario"placeholder="usuario"
+                required>
+                <input type="password" id="contraseña"
+                name="contraseña" placeholder="contraseña"
+                required>
+            </div>
+            <div class="actionlogin">
+                <button type="submit"
+                class="actionlogin" onclick="window.location.href='tarjeta.html'; return false;">iniciar sesion</button>
+                <span> ¿ Olvidaste la contraseña ?
+                 <a href="">recordar contraseña</a>
+                </span>
+            </div>
+        </form>
+    </main>
 </body>
 </html>
- 

@@ -1,52 +1,102 @@
+/* Reset de márgenes y rellenos predeterminados, y establece el modelo de caja como border-box */
+* {
+    margin: 0; /* Elimina márgenes predeterminados de todos los elementos */
+    padding: 0; /* Elimina rellenos predeterminados de todos los elementos */
+    box-sizing: border-box; /* Incluye bordes y rellenos en el cálculo del tamaño total del elemento */
+}
+
+/* Configuración base del cuerpo */
 body {
-    font-family: Arial, sans-serif; /* Define la fuente principal del texto como Arial, con una alternativa sans-serif. */
-    display: flex; /* Aplica un diseño flexible al cuerpo para alinear elementos. */
-    justify-content: center; /* Centra horizontalmente el contenido dentro del cuerpo. */
-    align-items: center; /* Centra verticalmente el contenido dentro del cuerpo. */
-    height: 100vh; /* Establece la altura del cuerpo al 100% del alto de la ventana del navegador. */
-    margin: 0; /* Elimina los márgenes predeterminados del cuerpo. */
-    background-color: #f4f4f4; /* Establece un color de fondo gris claro para el cuerpo. */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    font-family: 'GILL Sans', 'Gill Sans MT', Calibri, 'Trebuchet', sans-serif; /* Fuente principal */
+    background-color: #f4f4f4; /* Fondo claro para mejor contraste */
+    display: flex; /* Usa flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
-.login-form {
-    background: #fff; /* Establece un fondo blanco para el formulario de inicio de sesión. */
-    padding: 20px; /* Agrega un espacio interno de 20px alrededor del contenido del formulario. */
-    border-radius: 8px; /* Redondea las esquinas del formulario con un radio de 8px. */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aplica una sombra sutil al formulario para darle profundidad. */
-    width: 300px; /* Define un ancho fijo de 300px para el formulario. */
+/* Contenedor principal del login */
+.contendor-login {
+    width: 80%; /* Ocupa el 80% del ancho disponible */
+    max-width: 400px; /* Limita el ancho máximo para pantallas grandes */
+    height: auto; /* Altura ajustable según el contenido */
+    padding: 2em; /* Espaciado interno uniforme */
+    background-color: #333; /* Fondo oscuro para contraste */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto elevado */
+    display: flex; /* Flexbox para organizar contenido interno */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    position: relative; /* Posicionamiento relativo para futuros ajustes */
 }
 
-.login-form h2 {
-    margin-bottom: 20px; /* Agrega un margen inferior de 20px al título del formulario. */
-    font-size: 24px; /* Establece el tamaño de fuente del título en 24px. */
-    text-align: center; /* Centra el texto del título horizontalmente. */
+/* Título del login */
+h1.login {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    font-size: 2.5em; /* Tamaño grande para destacar */
+    margin-bottom: 1em; /* Espaciado inferior */
 }
 
-.login-form label {
-    display: block; /* Hace que las etiquetas ocupen toda la línea. */
-    margin-bottom: 5px; /* Agrega un margen inferior de 5px a las etiquetas. */
-    font-weight: bold; /* Hace que el texto de las etiquetas sea negrita. */
+/* Contenedor del formulario */
+.loginformcontainer {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    display: flex; /* Flexbox para organizar elementos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 1em; /* Espaciado uniforme entre elementos */
 }
 
-.login-form input {
-    width: 100%; /* Hace que los campos de entrada ocupen el 100% del ancho del formulario. */
-    padding: 10px; /* Agrega un espacio interno de 10px dentro de los campos de entrada. */
-    margin-bottom: 15px; /* Agrega un margen inferior de 15px entre los campos de entrada. */
-    border: 1px solid #ccc; /* Establece un borde gris claro de 1px alrededor de los campos de entrada. */
-    border-radius: 4px; /* Redondea ligeramente las esquinas de los campos de entrada con un radio de 4px. */
+/* Formulario de login */
+#formlogin {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    display: flex; /* Flexbox para organizar elementos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 1em; /* Espaciado uniforme entre elementos */
 }
 
-.login-form button {
-    width: 100%; /* Hace que el botón ocupe el 100% del ancho del formulario. */
-    padding: 10px; /* Agrega un espacio interno de 10px dentro del botón. */
-    background-color: #007BFF; /* Establece un color de fondo azul para el botón. */
-    color: white; /* Establece el color del texto del botón en blanco. */
-    border: none; /* Elimina el borde predeterminado del botón. */
-    border-radius: 4px; /* Redondea ligeramente las esquinas del botón con un radio de 4px. */
-    font-size: 16px; /* Establece el tamaño de fuente del texto del botón en 16px. */
-    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón. */
+/* Inputs de texto y contraseña */
+#formlogin input[type="text"], 
+#formlogin input[type="password"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 0.8em; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente estándar */
+    transition: border-color 0.3s ease; /* Transición suave al cambiar el color del borde */
 }
 
-.login-form button:hover {
-    background-color: #0056b3; /* Cambia el color de fondo del botón a un azul más oscuro al pasar el cursor sobre él. */
+#formlogin input[type="text"]:focus, 
+#formlogin input[type="password"]:focus {
+    outline: none; /* Elimina el contorno predeterminado */
+    border: 2px solid #ff4500; /* Borde más visible al enfocar */
+    padding-left: 1em; /* Ajusta el relleno izquierdo */
+}
+
+/* Botón de login */
+.btnlogin {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 1em; /* Espaciado interno aumentado */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #6a0dad; /* Azul violeta */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2em; /* Tamaño de fuente ligeramente más grande */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves para color y escala */
+}
+
+.btnlogin:hover {
+    background-color: #7fff00; /* Cambia a verde brillante al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Sección de acciones del login */
+.actionlogin {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    text-align: center; /* Centra el texto */
+    margin-top: 1em; /* Espaciado superior */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    color: #555; /* Texto gris oscuro */
 }
