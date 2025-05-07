@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box; /* Aplica box-sizing a todos los elementos para incluir padding y borde en el tamaño total */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el padding predeterminado */
+    /* Puedes agregar un estilo global para definir un color de texto predeterminado o un tamaño de fuente base */
+    /* Ejemplo: color: #333; font-size: 16px; */
+}
+
+body {
+    background-color: antiquewhite; /* Color de fondo */
+    font-family: 'Times New Roman', Times, serif; /* Fuente principal */
+    /* Considera agregar un margen interno o externo para el contenido principal */
+    /* Ejemplo: padding: 20px; */
+    /* También puedes definir un ancho máximo para el contenido y centrarlo */
+    /* Ejemplo: max-width: 1200px; margin: 0 auto; */
+}
+
+img {
+    height: 100%; /* Estilo para las imágenes */
+    width: 100%;
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin deformarse */
+    /* Podrías agregar un borde o sombra para destacar las imágenes */
+    /* Ejemplo: border: 2px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.producto {
+    width: 300px; /* Ancho del contenedor */
+    height: 120px; /* Alto del contenedor */
+    background-color: rgb(84, 84, 228); /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    margin: 15px; /* Separación externa con otros productos */
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex; /* Usa flexbox para el diseño interno */
+    flex-direction: row; /* Elementos en fila */
+    gap: 10px; /* Espaciado entre elementos */
+    /* Podrías agregar una transición para suavizar los cambios de color o sombra */
+    /* Ejemplo: transition: background-color 0.3s ease, box-shadow 0.3s ease; */
+    /* Considera usar media queries para ajustar el diseño en pantallas más pequeñas */
+    /* Ejemplo: @media (max-width: 600px) { flex-direction: column; width: 100%; } */
+}
+
+.producto:nth-child(even) {
+    background-color: blueviolet; /* Color de fondo */
+    color: white; /* Color del texto */
+    /* Podrías agregar un efecto hover para resaltar los productos al pasar el cursor */
+    /* Ejemplo: &:hover { background-color: darkviolet; transform: scale(1.05); } */
+}
+
+.producto:nth-child(odd) {
+    background-color: transparent; /* Fondo transparente */
+    box-shadow: 0px 0px 10px 5px; /* Sombra alrededor del contenedor */
+    color: rgb(105, 102, 102); /* Color del texto */
+    flex-direction: row-reverse; /* Invierte la dirección de los elementos */
+    /* Considera agregar un borde o un efecto de transformación para destacar los productos */
+    /* Ejemplo: border: 1px solid #ccc; transform: rotate(1deg); */
+}
+
+.fotoProducto {
+    height: 100%; /* Altura completa del contenedor */
+    width: 80px; /* Ancho fijo */
+    flex: 0 0 100px; /* No crece ni se encoge, ancho fijo */
+    border-radius: 6px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta contenido que exceda el contenedor */
+    /* Podrías agregar un borde o sombra para destacar la imagen */
+    /* Ejemplo: border: 2px solid #ddd; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.datoProducto {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Elementos en columna */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    text-transform: capitalize!important; /* Capitaliza el texto */
+    /* Considera agregar un espaciado interno o ajustar el tamaño de fuente */
+    /* Ejemplo: padding: 5px; font-size: 14px; */
+}
+
+.valoresProducto {
+    display: flex; /* Usa flexbox */
+    flex-direction: row; /* Elementos en fila */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+    /* Podrías agregar un estilo para alinear mejor los valores o destacar los más importantes */
+    /* Ejemplo: font-weight: bold; color: #444; */
+}
+
+.valoracion {
+    color: black; /* Color del texto */
+    height: 30px; /* Altura fija */
+    background-color: rgb(212, 236, 145); /* Color de fondo */
+    flex: 0 0 0; /* No crece ni se encoge */
+    aspect-ratio: 1/1; /* Relación de aspecto cuadrada */
+    border-radius: 50%; /* Forma circular */
+    line-height: 30px; /* Centra el texto verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important; /* Fuente específica */
+    /* Podrías agregar un efecto hover para cambiar el color o el tamaño de la valoración */
+    /* Ejemplo: &:hover { background-color: #c0e57a; transform: scale(1.1); } */
+}
