@@ -1,0 +1,138 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #e0e0e0;
+}
+
+.tarjeta {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-imagen {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.tarjeta-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarjeta-ranking {
+  position: absolute;
+  top: 280px;
+  right: 12px;
+  background-color: #36f485;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+
+.contenido {
+  padding: 20px;
+  background-color: white;
+}
+
+.contenido h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.contenido small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+}
+.restaurante-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.restaurante-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.precio {
+  color: #36f485;
+  font-weight: bold;
+  font-size: 1.2rem; /* Decreased font size */
+  margin-top: 4px;
+}
+
+.info-iconos {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0 20px;
+  text-align: center;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  color: #36f485;
+}
+
+.info-item i {
+  font-size: 2rem; /* Reduced size for medium icons */
+  margin-bottom: 8px;
+}
+
+.info-item span {
+  font-size: 1.2rem; /* Adjusted size for text */
+  position: relative;
+  top: 20px;
+  color: #999;
+}
+
+.descripcion {
+     position: relative;
+  top: 50px;
+  font-size: 1.2rem;         
+  color: #c2c2c2;
+  line-height: 1.6;
+  max-width: 85%;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  font-weight: 150;
+}
+
+
+.navegador {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  background-color: white;
+  color: gray;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navegador a {
+  color: gray;
+  text-decoration: none;
+}

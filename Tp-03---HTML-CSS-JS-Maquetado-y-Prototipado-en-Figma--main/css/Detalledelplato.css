@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.tarjeta{
+    width: 500px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.imagen-contenido{
+    position: relative;
+}
+
+.tarjeta-contenido{
+    padding: 30px;
+    position: relative;
+}
+.titulo{
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.descripcion{
+    font-size: 17px;
+    color: #777;
+    margin-bottom: 20px;
+}
+.nota {
+    font-size: 15px;
+    color: #999;
+    margin-bottom: 25px;
+}
+.div{
+    border-top: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+.accion{
+    display:flex;
+    gap: 15px;
+}
+
+.a-boton{
+  background: white;
+  color: #36f485;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.a-numero{
+    font-size: 22px;
+    font-weight: bold;
+    min-width: 24px;
+    text-align: center;
+}
+.add {
+  flex: 2;
+  border: none;
+  background-color: #36f485;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 120px; 
+}
+.a-contador{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #36f485;
+    color: white;
+    border-radius: 4px;
+    gap: 12px;
+    padding: 12px;
+}
+.precio{
+    background-color: #36f485;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 0 0 0 6px;
+    position: absolute;
+    top: 350px;
+    right: 0;
+}
+.tarjeta img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
